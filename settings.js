@@ -10,5 +10,5 @@ module.exports = {
     cacheTTLseconds: process.env.WEATHERW_CACHE_TTL || (1 * 60 * 60),
 
     widgetBaseUrl: process.env.WEATHERW_WIDGET_BASE_URL ||
-        "http://weatherw.herokuapp.com/widget"
+        "http://localhost:4000/widget"
 };

@@ -1,0 +1,23 @@
+<script>
+    (function () {
+        var elId = "<%- widgetId %>";
+        var baseUrl = "<%- baseUrl %>";
+
+        var el = document.getElementById(elId);
+
+        var cityCode = el.getAttribute('data-weatherw-cityCode');
+        var url = baseUrl + "?cityCode=" + cityCode;
+
+        var XHR = XMLHttpRequest || ActiveXObject;
+        var request = new XHR('MSXML2.XMLHTTP.3.0');
+        request.open('GET', url, true);
+        request.onreadystatechange = function () {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
+                    el.innerHTML = request.responseText;
+                }
+            }
+        }
+        request.send();
+    }) ();
+</script>
