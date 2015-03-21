@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Погодные виджеты для всех! :)</h1>
+        <h2>Выбирайте виджет:</h2>
+        <% widgets.forEach(function(widget) { %>
+            <h3><%= widget.place.name %></h3>
+            <div style="float:left">
+                <%- widget.embedCode %>
+            </div>
+            <div style="float:left; margin-left:20px">
+                <textarea rows=8 cols=100><%= widget.embedCode %></textarea>
+            </div>
+            <div style="clear:both;"></div>
+        <% }); %>
+        <br>
+    </body>
+</html>

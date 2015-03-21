@@ -7,6 +7,8 @@ var widgetRouter = require('./lib/widget/router');
 debug('setting up http server');
 var app = express();
 
+app.set('view engine', 'ejs');
+
 app.use('/', webRouter);
 app.use('/widget', widgetRouter);
 
