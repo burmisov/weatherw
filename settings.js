@@ -1,6 +1,12 @@
 module.exports = {
 
     owmApiUrl: process.env.WEATHERW_OWM_API_URL ||
-        "http://api.openweathermap.org/data/2.5/forecast/daily"
+        "http://api.openweathermap.org/data/2.5/forecast/daily",
+
+    redisPort: process.env.WEATHERW_REDIS_PORT || 6379,
+    redisHost: process.env.WEATHERW_REDIS_HOST || '127.0.0.1',
+    redisPass: process.env.WEATHERW_REDIS_PASS || '',
+
+    cacheTTLseconds: process.env.WEATHERW_CACHE_TTL || (1 * 60 * 60)
 
 };
