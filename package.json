@@ -18,6 +18,8 @@
   "homepage": "https://github.com/burmisov/weatherw",
   "dependencies": {
     "debug": "^2.1.3",
-    "express": "^4.12.3"
+    "express": "^4.12.3",
+    "lodash": "^3.5.0",
+    "request": "^2.53.0"
   }
 }
