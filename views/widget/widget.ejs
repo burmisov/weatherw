@@ -1,3 +1,24 @@
-<span>
-    todo: widget body
-</span>
+<div style="margin:2px;border-style:solid;border-width:1px;min-width:58px;max-width:58px;min-height:116px;max-height:122px;padding:2px">
+    <p style="min-height:30px;font-family:sans-serif;font-size:0.7em;margin:0px;text-align:center">
+        <span style="vertical-align:middle">
+           <%= place.name %>
+        </span>
+    </p>
+    <p style="color:gray;font-family:sans-serif;font-size:0.6em;margin:0px;text-align:center">
+        <strong>
+            <%= weather[0].dayName %>
+        </strong>
+    </p>
+    <p style="font-family:sans-serif;font-size:0.5em;margin:0px;text-align:center">
+        <%= weather[0].shortDate %>
+    </p>
+    <img style="display:block;margin-left:auto;margin-right:auto" src="<%- weather[0].iconUrl %>"></img>
+
+    <% if (weather[0].temp.day > 0) { %> <span style="color:red"> <% } else { %> <span style="color:blue"> <% } %>
+        <p style="font-family:sans-serif;font-size:0.8em;margin:0px;text-align:center">
+            <strong>
+                <%= weather[0].temp.dayWithSign %>°C
+            </strong>
+        </p>
+    </span>
+</div>

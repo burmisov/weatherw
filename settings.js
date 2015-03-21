@@ -7,6 +7,8 @@ module.exports = {
     redisHost: process.env.WEATHERW_REDIS_HOST || '127.0.0.1',
     redisPass: process.env.WEATHERW_REDIS_PASS || '',
 
-    cacheTTLseconds: process.env.WEATHERW_CACHE_TTL || (1 * 60 * 60)
+    cacheTTLseconds: process.env.WEATHERW_CACHE_TTL || (1 * 60 * 60),
 
+    widgetBaseUrl: process.env.WEATHERW_WIDGET_BASE_URL ||
+        "http://weatherw.herokuapp.com/widget"
 };
